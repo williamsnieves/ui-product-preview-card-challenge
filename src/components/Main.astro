@@ -1,0 +1,63 @@
+---
+import ProductImage from "./ProductImage.astro";
+import ProductHeader from "./ProductHeader.astro";
+import ProductPrice from "./ProductPrice.astro";
+import ProductButton from "./ProductButton.astro";
+
+const productData = {
+  images: {
+    mobile: "image-product-mobile.jpg",
+    desktop: "image-product-desktop.jpg",
+    alt: "Gabrielle Essence Eau De Parfum bottle",
+  },
+  category: "Perfume",
+  title: "Gabrielle Essence Eau De Parfum",
+  description:
+    "A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.",
+  pricing: {
+    current: "$149.99",
+    original: "$169.99",
+  },
+  button: {
+    text: "Add to Cart",
+    icon: "/icon-cart.svg",
+  },
+};
+---
+
+<main
+  id="container"
+  class="flex justify-center items-center h-screen p-4"
+  style="background-color: var(--color-cream);"
+>
+  <section
+    class="w-[350px] rounded-lg shadow-lg flex flex-col md:flex-row md:w-[600px]"
+    style="background-color: var(--color-white);"
+  >
+    <ProductImage
+      mobileImage={productData.images.mobile}
+      desktopImage={productData.images.desktop}
+      alt={productData.images.alt}
+    />
+
+    <section class="gap-4 p-8 md:w-1/2 md:flex md:flex-col md:justify-center">
+      <ProductHeader
+        category={productData.category}
+        title={productData.title}
+        description={productData.description}
+      />
+
+      <ProductPrice
+        currentPrice={productData.pricing.current}
+        originalPrice={productData.pricing.original}
+      />
+
+      <ProductButton
+        text={productData.button.text}
+        iconSrc={productData.button.icon}
+      />
+    </section>
+  </section>
+
+  <style></style>
+</main>

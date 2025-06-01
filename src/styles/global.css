@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* Custom Fonts */
+  --font-fraunces: "Fraunces", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  
+  /* Product Card Colors */
+  --color-cream: #F2EAE2;
+  --color-dark-grayish-blue: #6C7289;
+  --color-dark-cyan: #3D8168;
+  --color-very-dark-cyan: #1A4032;
+  --color-very-dark-blue: #1c232b;
+  --color-white: #ffffff;
+}
+
+@theme {
+  --font-fraunces: "Fraunces", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}

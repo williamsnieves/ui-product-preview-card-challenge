@@ -1,0 +1,21 @@
+---
+export interface Props {
+  currentPrice: string;
+  originalPrice: string;
+}
+
+const { currentPrice, originalPrice } = Astro.props;
+---
+
+<div
+  class="flex gap-4 py-8 items-center"
+  style="color: var(--color-dark-grayish-blue);"
+>
+  <h3
+    class="text-[32px] font-bold font-fraunces"
+    style="color: var(--color-dark-cyan);"
+  >
+    {currentPrice}
+  </h3>
+  <span class="line-through">{originalPrice}</span>
+</div>

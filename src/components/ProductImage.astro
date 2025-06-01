@@ -1,0 +1,16 @@
+---
+export interface Props {
+  mobileImage: string;
+  desktopImage: string;
+  alt: string;
+}
+
+const { mobileImage, desktopImage, alt } = Astro.props;
+---
+
+<img src={mobileImage} alt={alt} class="rounded-t-lg md:hidden" />
+<img
+  src={desktopImage}
+  alt={alt}
+  class="hidden md:block md:rounded-l-lg md:rounded-tr-none md:w-1/2 md:object-cover"
+/>

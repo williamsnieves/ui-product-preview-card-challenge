@@ -1,0 +1,22 @@
+---
+export interface Props {
+  category: string;
+  title: string;
+  description: string;
+}
+
+const { category, title, description } = Astro.props;
+---
+
+<div class="flex flex-col gap-6" style="color: var(--color-dark-grayish-blue);">
+  <h4 class="tracking-[5px] text-xs uppercase">{category}</h4>
+  <h1
+    class="text-[32px] leading-8 font-fraunces"
+    style="color: var(--color-very-dark-blue);"
+  >
+    {title}
+  </h1>
+  <p class="text-sm">
+    {description}
+  </p>
+</div>

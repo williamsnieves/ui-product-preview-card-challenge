@@ -1,0 +1,30 @@
+---
+export interface Props {
+  text: string;
+  iconSrc?: string;
+  onClick?: string;
+}
+
+const { text, iconSrc = "/icon-cart.svg", onClick } = Astro.props;
+---
+
+<div>
+  <button
+    class="w-full text-white py-4 px-6 rounded-lg font-bold text-sm flex items-center justify-center gap-3 transition-colors duration-200 active:scale-95 transform"
+    style="background-color: var(--color-dark-cyan);"
+    onmouseover="this.style.backgroundColor='var(--color-very-dark-cyan)'"
+    onmouseout="this.style.backgroundColor='var(--color-dark-cyan)'"
+    onclick={onClick}
+  >
+    {
+      iconSrc && (
+        <img
+          src={iconSrc}
+          alt="Button icon"
+          class="w-4 h-4 filter brightness-0 invert"
+        />
+      )
+    }
+    <span>{text}</span>
+  </button>
+</div>
