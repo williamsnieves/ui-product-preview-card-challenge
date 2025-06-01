@@ -5,7 +5,11 @@ export interface Props {
   onClick?: string;
 }
 
-const { text, iconSrc = "/icon-cart.svg", onClick } = Astro.props;
+const {
+  text,
+  iconSrc = `${import.meta.env.BASE_URL}icon-cart.svg`,
+  onClick,
+} = Astro.props;
 ---
 
 <div>

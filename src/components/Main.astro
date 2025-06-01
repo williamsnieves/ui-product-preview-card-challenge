@@ -6,8 +6,8 @@ import ProductButton from "./ProductButton.astro";
 
 const productData = {
   images: {
-    mobile: "image-product-mobile.jpg",
-    desktop: "image-product-desktop.jpg",
+    mobile: `${import.meta.env.BASE_URL}/image-product-mobile.jpg`,
+    desktop: `${import.meta.env.BASE_URL}/image-product-desktop.jpg`,
     alt: "Gabrielle Essence Eau De Parfum bottle",
   },
   category: "Perfume",
@@ -20,7 +20,7 @@ const productData = {
   },
   button: {
     text: "Add to Cart",
-    icon: "/icon-cart.svg",
+    icon: `${import.meta.env.BASE_URL}/icon-cart.svg`,
   },
 };
 ---
