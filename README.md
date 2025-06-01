@@ -131,6 +131,58 @@ pnpm build
 pnpm preview
 ```
 
+## 🚀 Deployment
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+### GitHub Pages Setup
+
+1. **Fork or clone this repository** to your GitHub account
+
+2. **Update the Astro configuration**:
+   ```javascript
+   // astro.config.mjs
+   export default defineConfig({
+     site: 'https://YOUR_USERNAME.github.io',
+     base: '/ui-product-preview-card-challenge',
+     // ... rest of config
+   });
+   ```
+
+3. **Enable GitHub Pages**:
+   - Go to your repository settings on GitHub
+   - Navigate to **Pages** section
+   - Set **Source** to "GitHub Actions"
+
+4. **Push to main branch**:
+   ```bash
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
+   ```
+
+5. **Automatic deployment**: The GitHub Action will automatically build and deploy your site
+
+### Live Demo
+
+Once deployed, your site will be available at:
+```
+https://YOUR_USERNAME.github.io/ui-product-preview-card-challenge
+```
+
+### Local Testing
+
+To test the GitHub Pages build locally:
+
+```bash
+# Run the test script
+./scripts/test-deploy.sh
+
+# Or manually:
+pnpm build
+pnpm preview
+```
+
 ## 📱 Responsive Breakpoints
 
 - **Mobile**: `< 768px` - Single column layout, mobile image

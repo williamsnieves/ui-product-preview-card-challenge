@@ -1,16 +1,20 @@
 {
-  "name": "",
+  "name": "ui-product-preview-card-challenge",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "A modern, responsive product preview card built with Astro and Tailwind CSS",
   "scripts": {
     "dev": "astro dev",
+    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@tailwindcss/vite": "^4.1.7",
     "astro": "^5.8.0",
-    "tailwindcss": "^4.1.7"
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5.8.3"
   }
 }
